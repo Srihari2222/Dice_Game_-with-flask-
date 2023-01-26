@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dicee</title>
+    <link rel="stylesheet" href="/static/dice_styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+    
+  </head>
+  <body>
+    <form class="new" method="post">
+      <div class="result">
+        <h2>BOARD OF WINS</h2>
+        <ol class="list">
+          <li>Player-1 Wins : {{p1}}</li>
+          <li>Player-2 Wins : {{p2}}</li>
+          <li>DRAW : {{draw}}</li>
+        </ol>
+      </div>
+
+      <div class="container">
+        <h1>Play The Game!!!</h1>
+        <h3 class="gpt">{{email|tojson|safe}}</h3>
+
+        <div class="dice">
+          <p>Player 1</p>
+          <img class="img1"  src="/static/images/dice6.png">
+          <button class="btn btn1" onclick="change1()" type="button">Throw Me!</button>
+        </div>
+      
+        <div class="dice">
+          <p>Player 2</p>
+          <img class="img2" src="/static/images/dice6.png">
+          <button class="btn btn2" id="dis" disabled="true" ondblclick="danger()" onclick="change2()" type="button">Throw Me!</button>
+        </div>
+      </div>
+      <div class="bn">
+        <button class="mybtn btn" type="submit">Log Out</button>
+      </div>
+    </form>
+  </body>
+
+  <footer>
+    www 🎲 App Brewery 🎲 com
+  </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="/static/javascripts/index.js" charset="utf-8"></script>
+</html>
